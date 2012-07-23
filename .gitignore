@@ -1,0 +1,10 @@
+*~
+*.pyc
+.noseids
+TODO.txt
+README.html
+bin
+lib
+dist
+include
+src/templer.django_project_app.egg-info
