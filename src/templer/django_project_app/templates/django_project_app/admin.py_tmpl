@@ -1,0 +1,13 @@
+"""Admin for ${project}.${egg}"""
+from django.contrib import admin
+from django.utils.translation import ugettext as _
+
+from ${project}.${egg}.models import ${egg.capitalize}
+
+
+class ${egg.capitalize}Admin(admin.ModelAdmin):
+    """Admin for ${egg.capitalize}"""
+    actions_on_top = False
+    actions_on_bottom = True
+
+admin.site.register(${egg.capitalize}, ${egg.capitalize}Admin)

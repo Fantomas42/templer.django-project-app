@@ -1,0 +1,12 @@
+"""Forms for ${project}.${egg}"""
+from django import forms
+from django.utils.translation import ugettext as _
+
+from ${project}.${egg}.models import ${egg.capitalize}
+
+
+class ${egg.capitalize}Form(forms.ModelForm):
+    """Form for ${egg.capitalize}"""
+
+    class Meta:
+        model = ${egg.capitalize}

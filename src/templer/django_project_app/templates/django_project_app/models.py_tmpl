@@ -1,0 +1,18 @@
+"""Models for ${project}.${egg}"""
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+
+class ${egg.capitalize}(models.Model):
+    """Model for ${egg}"""
+
+    def __unicode__(self):
+        return '${egg.capitalize} %s' % self.pk
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('${egg}_${egg}_detail', (self.pk,))
+
+    class Meta:
+        verbose_name = _('${egg}')
+        verbose_name_plural = _('${egg}s')

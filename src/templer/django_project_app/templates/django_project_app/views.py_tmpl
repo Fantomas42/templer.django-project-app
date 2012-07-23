@@ -1,0 +1,19 @@
+"""Views for ${project}.${egg}"""
+from django.shortcuts import redirect
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+from ${project}.${egg}.forms import ${egg.capitalize}Form
+
+
+def view_${egg}_form(request):
+    if request.POST:
+        form = ${egg.capitalize}Form(request.POST)
+        if form.is_valid():
+            ${egg} = form.save()
+            return redirect(${egg})
+    else:
+        form = ${egg.capitalize}Form()
+    return render_to_response('${egg}/${egg}_form.html',
+                              {'form': form},
+                              context_instance=RequestContext(request))
