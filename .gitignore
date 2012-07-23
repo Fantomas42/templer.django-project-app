@@ -6,5 +6,6 @@ README.html
 bin
 lib
 dist
+build
 include
 src/templer.django_project_app.egg-info
