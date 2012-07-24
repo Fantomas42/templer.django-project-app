@@ -1,0 +1,15 @@
+"""Tests for ${project_root}.${egg}"""
+from django.test import TestCase
+
+from ${project_root}.${egg}.models import ${model}
+
+
+class ${model}TestCase(TestCase):
+    """Test case for ${model}"""
+
+    def test_${model_lower}_unicode(self):
+        """Simple test of ${model}.__unicode__()"""
+        ${model_lower} = ${model}()
+        ${model_lower}.save()
+        self.assertEquals(${model_lower}.__unicode__(),
+                          u'${model} 1')
