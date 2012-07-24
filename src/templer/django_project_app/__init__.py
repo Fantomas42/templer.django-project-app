@@ -1,6 +1,7 @@
 """templer.django_project_app"""
 import os
 
+from templer.core.vars import StringVar
 from templer.core.base import BaseTemplate
 
 HELP_TEXT = """
@@ -22,14 +23,23 @@ in %(project_root)s/settings.py:
     ...)
 """
 
+MODEL_VAR = StringVar(
+    'model',
+    title='Model name',
+    description='Default name of the model',
+    default='Model',
+    help="The name of the Model should be in singular form " \
+    "and in CapitalezWords format."
+    )
+
 
 class DjangoProjectApp(BaseTemplate):
     _template_dir = 'templates/django_project_app'
     summary = "A basic Django project application skeleton"
     help = HELP_TEXT
     category = 'Django'
-    vars = []
     use_cheetah = True
+    vars = [MODEL_VAR]
 
     def pre(self, command, output_dir, vars):
         super(DjangoProjectApp, self).pre(
