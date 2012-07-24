@@ -2,11 +2,11 @@
 from django import forms
 from django.utils.translation import ugettext as _
 
-from ${project_root}.${egg}.models import ${egg.capitalize}
+from ${project_root}.${egg}.models import ${model}
 
 
-class ${egg.capitalize}Form(forms.ModelForm):
-    """Form for ${egg.capitalize}"""
+class ${model}Form(forms.ModelForm):
+    """Form for ${model}"""
 
     class Meta:
-        model = ${egg.capitalize}
+        model = ${model}

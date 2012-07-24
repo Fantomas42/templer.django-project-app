@@ -45,6 +45,7 @@ class DjangoProjectApp(BaseTemplate):
         super(DjangoProjectApp, self).pre(
             command, output_dir, vars)
         vars['project_root'] = os.path.split(os.getcwd())[-1]
+        vars['model_lower'] = vars['model'].lower()
 
     def post(self, command, output_dir, vars):
         # Don't set the message to self.post_run_msg because the output

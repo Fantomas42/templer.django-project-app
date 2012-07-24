@@ -2,21 +2,21 @@
 from django.conf.urls.defaults import url
 from django.conf.urls.defaults import patterns
 
-from ${project_root}.${egg}.models import ${egg.capitalize}
+from ${project_root}.${egg}.models import ${model}
 
 
-${egg}s_conf = {'queryset': ${egg.capitalize}.objects.all()}
+${model_lower}s_conf = {'queryset': ${model}.objects.all()}
 
 
 urlpatterns = patterns('django.views.generic.list_detail',
                        url(r'^$', 'object_list',
-                           ${egg}s_conf, '${egg}_${egg}_list'),
+                           ${model_lower}s_conf, '${egg}_${model_lower}_list'),
                        url(r'^(?P<object_id>\d+)/$', 'object_detail',
-                           ${egg}s_conf, '${egg}_${egg}_detail'),
+                           ${model_lower}s_conf, '${egg}_${model_lower}_detail'),
                        )
 
 
 urlpatterns += patterns('${project_root}.${egg}.views',
-                        url(r'^add/$', 'view_${egg}_form',
-                            name='${egg}_${egg}_form'),
+                        url(r'^add/$', 'view_${model_lower}_form',
+                            name='${egg}_${model_lower}_form'),
                         )
