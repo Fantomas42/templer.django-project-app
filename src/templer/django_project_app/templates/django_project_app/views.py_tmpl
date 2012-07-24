@@ -1,9 +1,9 @@
-"""Views for ${project}.${egg}"""
+"""Views for ${project_root}.${egg}"""
 from django.shortcuts import redirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from ${project}.${egg}.forms import ${egg.capitalize}Form
+from ${project_root}.${egg}.forms import ${egg.capitalize}Form
 
 
 def view_${egg}_form(request):

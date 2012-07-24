@@ -1,8 +1,8 @@
-"""Urls for ${project}.${egg}"""
+"""Urls for ${project_root}.${egg}"""
 from django.conf.urls.defaults import url
 from django.conf.urls.defaults import patterns
 
-from ${project}.${egg}.models import ${egg.capitalize}
+from ${project_root}.${egg}.models import ${egg.capitalize}
 
 
 ${egg}s_conf = {'queryset': ${egg.capitalize}.objects.all()}
@@ -16,7 +16,7 @@ urlpatterns = patterns('django.views.generic.list_detail',
                        )
 
 
-urlpatterns += patterns('${project}.${egg}.views',
+urlpatterns += patterns('${project_root}.${egg}.views',
                         url(r'^add/$', 'view_${egg}_form',
                             name='${egg}_${egg}_form'),
                         )
