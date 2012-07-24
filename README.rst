@@ -33,6 +33,7 @@ Changelog
 0.1.1
 -----
 
+* The model name is now configurable.
 * Rename ``project`` var to ``project_root``.
 * Add a post run message with instructions for installing the new created
   applications.
