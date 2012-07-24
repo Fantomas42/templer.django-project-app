@@ -27,4 +27,21 @@ This will create a basic application skeleton related to your project,
 containing the models.py, urls.py and views.py which may be edited to
 taste.
 
+Changelog
+=========
+
+0.1.1
+-----
+
+* Rename ``project`` var to ``project_root``.
+* Add a post run message with instructions for installing the new created
+  applications.
+
+0.1
+---
+
+* Porting the code of the unreleased *paster.django_project_application* to
+  *templer.django-project-app*.
+
+
 .. _templer.core: http://pypi.python.org/pypi/templer.core
