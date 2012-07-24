@@ -28,8 +28,8 @@ MODEL_VAR = StringVar(
     title='Model name',
     description='Default name of the model',
     default='Model',
-    help="The name of the Model should be in singular form " \
-    "and in CapitalezWords format."
+    help='The name of the Model should be in singular form ' \
+    'and in CapitalizedWords format.'
     )
 
 
