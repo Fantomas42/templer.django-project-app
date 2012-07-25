@@ -2,7 +2,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-version = '0.1.1.dev'
+version = '0.1.1'
 
 setup(name='templer.django-project-app',
       version=version,
