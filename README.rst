@@ -30,6 +30,11 @@ taste.
 Changelog
 =========
 
+0.2
+---
+
+* Completing the default model and admin classes.
+
 0.1.1
 -----
 

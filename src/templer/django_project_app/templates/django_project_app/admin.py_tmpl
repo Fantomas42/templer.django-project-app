@@ -7,7 +7,13 @@ from ${project_root}.${egg}.models import ${model}
 
 class ${model}Admin(admin.ModelAdmin):
     """Admin for ${model}"""
-    actions_on_top = False
-    actions_on_bottom = True
+    date_hierarchy = 'creation_date'
+    list_filter = ['creation_date']
+    prepopulated_fields = {'slug': ['name']}
+    search_fields = ['name', 'description', 'slug']
+    list_display = ['name', 'slug', 'creation_date']
+    fieldsets = ((None, {'fields': ['name', 'description']}),
+                 (_('Publication'), {'fields': ['slug']}))
+
 
 admin.site.register(${model}, ${model}Admin)

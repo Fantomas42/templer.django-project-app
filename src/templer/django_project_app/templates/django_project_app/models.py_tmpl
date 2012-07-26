@@ -6,13 +6,23 @@ from django.utils.translation import ugettext_lazy as _
 class ${model}(models.Model):
     """Model for ${model}"""
 
+    name = models.CharField(_('name'), max_length=255)
+    description = models.TextField(_('description'), blank=True)
+
+    slug = models.SlugField(_('slug'), unique=True,
+                            help_text=_('used for publication'))
+    creation_date = models.DateTimeField(_('creation date'),
+                                         auto_now_add=True)
+
     def __unicode__(self):
-        return u'${model} %s' % self.pk
+        return self.name
 
     @models.permalink
     def get_absolute_url(self):
-        return ('${egg}_${model_lower}_detail', (self.pk,))
+        return ('${egg}_${model_lower}_detail', (self.slug,))
 
     class Meta:
         verbose_name = _('${model}')
         verbose_name_plural = _('${model}s')
+        ordering = ['-creation_date']
+        get_latest_by = 'creation_date'
