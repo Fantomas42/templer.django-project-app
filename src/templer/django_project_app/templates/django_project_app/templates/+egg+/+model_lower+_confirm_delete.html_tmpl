@@ -1,0 +1,15 @@
+{% extends "$egg/base.html"%}
+
+{% block title %}{{ block.super }} Delete{% endblock %}
+
+{% block content %}
+<h3>Delete {{ object }}</h3>
+
+<p>Are you sure you want to delete the {{ object }} ?</p>
+
+<form method="POST" action=".">
+  {% csrf_token %}
+  <input type="submit" value="Yes" />
+</form>
+
+{% endblock %}

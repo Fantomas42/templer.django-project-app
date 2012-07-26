@@ -3,6 +3,8 @@
 {% block title %}{{ block.super }} Form{% endblock %}
 
 {% block content %}
+{% if object %}<h3>{{ object }}</h3>{% endif %}
+
 <form action="." method="post">
   {% csrf_token %}
   <ul>

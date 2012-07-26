@@ -1,19 +1,38 @@
 """Views for ${project_root}.${egg}"""
-from django.shortcuts import redirect
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+from django.views.generic import ListView
+from django.views.generic import DetailView
+from django.views.generic.edit import CreateView
+from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView
+from django.core.urlresolvers import reverse_lazy
 
+from ${project_root}.${egg}.forms import ${model}
 from ${project_root}.${egg}.forms import ${model}Form
 
 
-def view_${model_lower}_form(request):
-    if request.POST:
-        form = ${model}Form(request.POST)
-        if form.is_valid():
-            ${model_lower} = form.save()
-            return redirect(${model_lower})
-    else:
-        form = ${model}Form()
-    return render_to_response('${egg}/${model_lower}_form.html',
-                              {'form': form},
-                              context_instance=RequestContext(request))
+class ${model}List(ListView):
+    """List view for ${model}"""
+    model = ${model}
+
+
+class ${model}Detail(DetailView):
+    """Detail view for ${model}"""
+    model = ${model}
+
+
+class ${model}Create(CreateView):
+    """Create view for ${model}"""
+    model = ${model}
+    form_class = ${model}Form
+
+
+class ${model}Update(UpdateView):
+    """Update view for ${model}"""
+    model = ${model}
+    form_class = ${model}Form
+
+
+class ${model}Delete(DeleteView):
+    """Delete view for ${model}"""
+    model = ${model}
+    success_url = reverse_lazy('${egg}_${model_lower}_list')
