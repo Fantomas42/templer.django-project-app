@@ -35,5 +35,8 @@ setup(name='templer.django-project-app',
       entry_points="""
       [paste.paster_create_template]
       django_project_app = templer.django_project_app:DjangoProjectApp
+
+      [templer.templer_structure]
+      management_command = templer.django_project_app:ManagementCommandStructure
       """,
       )

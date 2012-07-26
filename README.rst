@@ -33,6 +33,7 @@ Changelog
 0.2
 ---
 
+* Adding structure for management commands.
 * Completing the default model and admin classes.
 
 0.1.1

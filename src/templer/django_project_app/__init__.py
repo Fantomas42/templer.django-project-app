@@ -1,8 +1,12 @@
+
 """templer.django_project_app"""
 import os
 
 from templer.core.vars import StringVar
+from templer.core.vars import BooleanVar
 from templer.core.base import BaseTemplate
+from templer.core.structures import Structure
+
 
 HELP_TEXT = """
 This creates a basic skeleton for a Django application within a project.
@@ -32,6 +36,20 @@ MODEL_VAR = StringVar(
     'and in CapitalizedWords format.'
     )
 
+MANAGEMENT_COMMAND_VAR = BooleanVar(
+    'add_management_command',
+    title='Add management command',
+    description='Should the application have management command ?',
+    default=False,
+    structures={'False': None, 'True': 'management_command'},
+    help='This will create the structure for adding management ' \
+    'commands to your application.'
+    )
+
+
+class ManagementCommandStructure(Structure):
+    _structure_dir = 'structures/management_command'
+
 
 class DjangoProjectApp(BaseTemplate):
     _template_dir = 'templates/django_project_app'
@@ -39,7 +57,7 @@ class DjangoProjectApp(BaseTemplate):
     help = HELP_TEXT
     category = 'Django'
     use_cheetah = True
-    vars = [MODEL_VAR]
+    vars = [MODEL_VAR, MANAGEMENT_COMMAND_VAR]
 
     def pre(self, command, output_dir, vars):
         super(DjangoProjectApp, self).pre(

@@ -1,0 +1,13 @@
+"""Base management command for ${project_root}.${egg}"""
+from django.core.management.base import BaseCommand
+from django.core.management.base import CommandError
+
+from ${project_root}.${egg}.models import ${model}
+
+
+class Command(BaseCommand):
+    args = '<put args here> ...'
+    help = 'Help for the command'
+
+    def handle(self, *args, **options):
+        raise CommandError('Command not implemented yet.')
