@@ -30,9 +30,10 @@ taste.
 Changelog
 =========
 
-0.2
+1.0
 ---
 
+* Using class-based views.
 * Adding structure for management commands.
 * Completing the default model and admin classes.
 
