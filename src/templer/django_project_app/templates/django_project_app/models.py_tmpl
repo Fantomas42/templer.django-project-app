@@ -22,7 +22,7 @@ class ${model}(models.Model):
         return ('${egg}_${model_lower}_detail', (self.slug,))
 
     class Meta:
-        verbose_name = _('${model}')
-        verbose_name_plural = _('${model}s')
+        verbose_name = _('${model_lower}')
+        verbose_name_plural = _('${model_lower}s')
         ordering = ['-creation_date']
         get_latest_by = 'creation_date'
