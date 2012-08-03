@@ -11,10 +11,24 @@ This package extends the functionality of the templer code generation
 system. It builds upon the functionality of templer.core_, and depends on
 that package.
 
-This package provides basic support for creating Django applications within
-an existing project.
+Templer.django-project-app provides basic support for creating Django
+applications within an existing project like the ``startproject`` command
+but in a more useful way.
 
-Creating Applications
+
+Getting the code
+================
+
+For the latest stable version of the package use `easy_install` or `pip`: ::
+
+  $ easy_install templer.django-project-app
+  $ pip install templer.django-project-app
+
+You could also retrieve the development version of the module like this: ::
+
+  $ pip install -e git://github.com/Fantomas42/templer.django-project-app.git#egg=templer.django-project-app
+
+Creating applications
 =====================
 
 As with the parent package, templer.core, creating packages using
@@ -29,6 +43,11 @@ taste.
 
 Changelog
 =========
+
+1.1
+---
+
+* Fix model's meta verbose names.
 
 1.0
 ---
