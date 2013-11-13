@@ -47,6 +47,7 @@ Changelog
 1.1
 ---
 
+* Pep8 on the code.
 * Fix model's meta verbose names.
 
 1.0
