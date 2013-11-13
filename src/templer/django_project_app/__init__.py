@@ -1,4 +1,3 @@
-
 """templer.django_project_app"""
 import os
 
@@ -32,9 +31,9 @@ MODEL_VAR = StringVar(
     title='Model name',
     description='Default name of the model',
     default='Model',
-    help='The name of the Model should be in singular form ' \
+    help='The name of the Model should be in singular form '
     'and in CapitalizedWords format.'
-    )
+)
 
 MANAGEMENT_COMMAND_VAR = BooleanVar(
     'add_management_command',
@@ -42,9 +41,9 @@ MANAGEMENT_COMMAND_VAR = BooleanVar(
     description='Should the application have management command ?',
     default=False,
     structures={'False': None, 'True': 'management_command'},
-    help='This will create the structure for adding management ' \
+    help='This will create the structure for adding management '
     'commands to your application.'
-    )
+)
 
 
 class ManagementCommandStructure(Structure):
@@ -53,7 +52,7 @@ class ManagementCommandStructure(Structure):
 
 class DjangoProjectApp(BaseTemplate):
     _template_dir = 'templates/django_project_app'
-    summary = "A basic Django project application skeleton"
+    summary = 'A basic Django project application skeleton'
     help = HELP_TEXT
     category = 'Django'
     use_cheetah = True
