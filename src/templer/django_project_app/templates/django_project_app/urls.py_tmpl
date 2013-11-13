@@ -26,4 +26,4 @@ urlpatterns = patterns(
     url(r'^(?P<slug>[-_\w]+)/delete/$',
         ${model}Delete.as_view(),
         name='${egg}_${model_lower}_delete'),
-    )
+)
