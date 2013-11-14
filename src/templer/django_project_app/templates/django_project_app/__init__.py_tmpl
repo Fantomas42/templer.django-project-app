@@ -1,1 +1,1 @@
-"""${project_root}.${egg}"""
+"""${project_root_module}${egg}"""

@@ -1,7 +1,7 @@
-"""Tests for ${project_root}.${egg}"""
+"""Tests for ${project_root_module}${egg}"""
 from django.test import TestCase
 
-from ${project_root}.${egg}.models import ${model}
+from ${project_root_module}${egg}.models import ${model}
 
 
 class ${model}TestCase(TestCase):
