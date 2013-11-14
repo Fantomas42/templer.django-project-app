@@ -41,8 +41,18 @@ This will create a basic application skeleton related to your project,
 containing the models.py, urls.py and views.py which may be edited to
 taste.
 
+If your application is not located within a project, you can also use the
+script but with a different template name, like this: ::
+
+  $ templer django_app
+
 Changelog
 =========
+
+1.2
+---
+
+* Add ``django_app`` template for application created outside projects.
 
 1.1
 ---
