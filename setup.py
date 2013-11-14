@@ -36,6 +36,7 @@ setup(
     ],
     entry_points="""
     [paste.paster_create_template]
+    django_app = templer.django_project_app:DjangoApp
     django_project_app = templer.django_project_app:DjangoProjectApp
 
     [templer.templer_structure]
