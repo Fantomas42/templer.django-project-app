@@ -14,15 +14,15 @@ This creates a basic skeleton for a Django application within a project.
 POST_RUN_MESSAGE = """
 Now you can install your application into your project by adding these lines.
 
-in %(project_root)s/urls.py:
+in %(project_root_path)surls.py:
 
-  url(r'^%(egg)s/', include('%(project_root)s.%(egg)s.urls')),
+  url(r'^%(egg)s/', include('%(project_root_module)s%(egg)s.urls')),
 
-in %(project_root)s/settings.py:
+in %(project_root_path)ssettings.py:
 
   INSTALLED_APPS = (
     ...
-    '%(project_root)s.%(egg)s',
+    '%(project_root_module)s%(egg)s',
     ...)
 """
 
@@ -62,6 +62,8 @@ class DjangoProjectApp(BaseTemplate):
         super(DjangoProjectApp, self).pre(
             command, output_dir, vars)
         vars['project_root'] = os.path.split(os.getcwd())[-1]
+        vars['project_root_path'] = '%s/' % vars['project_root']
+        vars['project_root_module'] = '%s.' % vars['project_root']
         vars['model_lower'] = vars['model'].lower()
 
     def post(self, command, output_dir, vars):
