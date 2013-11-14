@@ -1,12 +1,12 @@
-"""Urls for ${project_root}.${egg}"""
+"""Urls for ${project_root_module}${egg}"""
 from django.conf.urls import url
 from django.conf.urls import patterns
 
-from ${project_root}.${egg}.views import ${model}List
-from ${project_root}.${egg}.views import ${model}Detail
-from ${project_root}.${egg}.views import ${model}Create
-from ${project_root}.${egg}.views import ${model}Update
-from ${project_root}.${egg}.views import ${model}Delete
+from ${project_root_module}${egg}.views import ${model}List
+from ${project_root_module}${egg}.views import ${model}Detail
+from ${project_root_module}${egg}.views import ${model}Create
+from ${project_root_module}${egg}.views import ${model}Update
+from ${project_root_module}${egg}.views import ${model}Delete
 
 
 urlpatterns = patterns(

@@ -1,8 +1,8 @@
-"""Admin for ${project_root}.${egg}"""
+"""Admin for ${project_root_module}${egg}"""
 from django.contrib import admin
 from django.utils.translation import ugettext as _
 
-from ${project_root}.${egg}.models import ${model}
+from ${project_root_module}${egg}.models import ${model}
 
 
 class ${model}Admin(admin.ModelAdmin):
