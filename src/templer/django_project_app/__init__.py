@@ -74,3 +74,14 @@ class DjangoProjectApp(BaseTemplate):
         print self.post_run_message
         super(DjangoProjectApp, self).post(
             command, output_dir, vars)
+
+
+class DjangoApp(DjangoProjectApp):
+    summary = 'A basic Django project application skeleton'
+
+    def pre(self, command, output_dir, vars):
+        super(DjangoApp, self).pre(
+            command, output_dir, vars)
+        vars['project_root'] = ''
+        vars['project_root_path'] = ''
+        vars['project_root_module'] = ''
