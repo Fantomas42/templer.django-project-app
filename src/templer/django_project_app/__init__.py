@@ -52,7 +52,7 @@ class ManagementCommandStructure(Structure):
 
 class DjangoProjectApp(BaseTemplate):
     _template_dir = 'templates/django_project_app'
-    summary = 'A basic Django project application skeleton'
+    summary = 'A basic Django project application skeleton within a project'
     help = HELP_TEXT
     category = 'Django'
     use_cheetah = True
