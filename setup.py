@@ -2,7 +2,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-version = '1.1'
+version = '1.2'
 
 setup(
     name='templer.django-project-app',
@@ -36,6 +36,7 @@ setup(
     ],
     entry_points="""
     [paste.paster_create_template]
+    django_app = templer.django_project_app:DjangoApp
     django_project_app = templer.django_project_app:DjangoProjectApp
 
     [templer.templer_structure]

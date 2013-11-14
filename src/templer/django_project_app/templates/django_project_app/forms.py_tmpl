@@ -1,7 +1,7 @@
-"""Forms for ${project_root}.${egg}"""
+"""Forms for ${project_root_module}${egg}"""
 from django import forms
 
-from ${project_root}.${egg}.models import ${model}
+from ${project_root_module}${egg}.models import ${model}
 
 
 class ${model}Form(forms.ModelForm):

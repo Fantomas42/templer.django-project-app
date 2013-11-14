@@ -1,4 +1,4 @@
-"""Views for ${project_root}.${egg}"""
+"""Views for ${project_root_module}${egg}"""
 from django.views.generic import ListView
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView
@@ -6,8 +6,8 @@ from django.views.generic.edit import UpdateView
 from django.views.generic.edit import DeleteView
 from django.core.urlresolvers import reverse_lazy
 
-from ${project_root}.${egg}.forms import ${model}
-from ${project_root}.${egg}.forms import ${model}Form
+from ${project_root_module}${egg}.forms import ${model}
+from ${project_root_module}${egg}.forms import ${model}Form
 
 
 class ${model}List(ListView):

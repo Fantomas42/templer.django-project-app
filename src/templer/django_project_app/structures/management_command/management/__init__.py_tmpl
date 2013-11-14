@@ -1,1 +1,1 @@
-"""Management for ${project_root}.${egg}"""
+"""Management for ${project_root_module}${egg}"""
